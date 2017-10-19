@@ -1,7 +1,7 @@
-#area-pug, #area-goat, #area-dog, #area-pig{
+#equal, #iso, #scal, #no{
   display: none;
 }
 
-img{
-  width: 400px;
+img {
+  width: 300px;
 }

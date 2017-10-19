@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vote!</title>
+    <title>TRIANGLE!</title>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
@@ -9,41 +9,45 @@
     </script>
   </head>
   <body>
-    <h1>Vote!</h1>
     <div class="container">
+      <h1>What kind of triangle am I triangling?</h1>
+      <img src="img/triangle.gif" alt="gif of triangle people.">
       <div class="form-group">
-        <form id="data">
-          <div class="userInfo">
-          <label for="name"></label>
-          <input type="text" id="name" name="name" placeholder="put name here...">
+        <form id="triangle-form">
+          <label for="side1">Side 1 length
+          <input class="form-control" id="side-one" type="text">
+          </label>
           </div>
-          <label for="dob"></label>
-          <input id="date" type="text" name="dob" placeholder="year you were born...">
+          <div class="form-group">
+            <label for="side2">Side 2 length
+            <input class="form-control" id="side-two" type="text">
+            </label>
           </div>
-          <div class="radio">
-            <label><input type="radio" name="animal" value="cat"> cat</label>
+          <div class="form-group">
+            <label for="side3">Side 3 length
+            <input class="form-control" id="side-three" type="text">
+            </label>
           </div>
-          <div class="radio">
-            <label><input type="radio" name="animal" value="dog"> dog</label>
-          </div>
-          <button type="submit" name="btn" class="submit"> submit</button>
+          <button type="submit" class="btn btn-dark">Submit!</button>
         </form>
       </div>
-      <div id="area-pug">
-        <img src="img/pug.jpg" alt="a cute pug">
-        <p>Hello, <span class="name"></span>!</p>
+    </div>
+    <div class="container">
+      <div id="equal">
+        <h2>Your triangle is EQUILATERAL, dude!</h2>
+        <img src="img/equal.gif" alt="gif of a triangle.">
       </div>
-      <div id="area-pig">
-        <img src="img/pig.jpg" alt="a cute pig">
-        <p>Hello, <span class="name"></span>!</p>
+      <div id="iso">
+        <h2>This triangle is ISOSCELES!</h2>
+        <img src="img/iso.gif" alt="gif of a triangle.">
       </div>
-      <div id ="area-dog">
-        <img src="img/dog.jpg" alt="a cute dog">
-        <p>Hello, <span class="name"></span>!</p>
+      <div id="scal">
+        <h2>Wow! What a SCALENE triangle you have!</h2>
+        <img src="img/scal.jpg" alt="image of a triangle.">
       </div>
-      <div id="area-goat">
-        <img src="img/goat.jpg" alt="a cute goat">
-        <p>Hello, <span class="name"></span>!</p>
+      <div id="no">
+        <h2>This is definitely not a triangle, there's the door.</h2>
+        <img src="img/sloth.gif" alt="gif of a sloth.">
       </div>
     </div>
   </body>

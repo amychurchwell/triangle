@@ -1,23 +1,31 @@
 $(document).ready(function() {
-  $("#data").submit(function(event) {
-    var animal = $("input:radio[name=animal]:checked").val();
-    var dob = $("#date").val();
-    var name1 = $("#name").val();
-    $(".name").text(name1);
-    if(animal === 'cat'){
-      $('#area-goat').show();
-      $('#area-dog').hide();
+  $("#triangle-form").submit(function(event) {
+    var one = parseInt($("input#side-one").val());
+    var two = parseInt($("input#side-two").val());
+    var three = parseInt($("input#side-three").val());
 
-    }
-    if(dob >= 1990){
-      $('#area-pig').show();
-      $('#area-goat').hide();
-      $('#area-dog').hide();
-    }
-    else{
-      $('#area-dog').show();
+    if ((one === two) && (two === three) && (one === three)) {
+      $('#equal').show();
+      $('#iso').hide();
+      $('#scal').hide();
+      $('#no').hide();
+    } else if ((one === two) || (two === three)){
+        $('#iso').show();
+        $('#equal').hide();
+        $('#scal').hide();
+        $('#no').hide();
+    } else if ((one + three) <= two || (two + three) <= one){
+      $('#no').show();
+      $('#scal').hide();
+      $('#equal').hide();
+      $('#iso').hide();
+    } else if ((one != two) && (two != three)){
+        $('#scal').show();
+        $('#iso').hide();
+        $('#equal').hide();
+        $('#no').hide();
+      }
 
-    }
     event.preventDefault();
   });
 });

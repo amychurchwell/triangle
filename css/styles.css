@@ -1,0 +1,7 @@
+#area-pug, #area-goat, #area-dog, #area-pig{
+  display: none;
+}
+
+img{
+  width: 400px;
+}
